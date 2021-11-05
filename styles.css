@@ -1,0 +1,145 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+}
+
+#bottom-bottom-textlol {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: #022449;
+}
+
+#bottom-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin:  5%;
+  color: #FEF2BF;
+  margin-top: 1.3rem;
+}
+
+#bottom-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin:  5%;
+  margin: 0px 0px 10px 0px;
+  color: #FEF2BF;
+}
+
+#title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  margin-bottom: 0px;
+  color: #FEF2BF;
+}
+
+.cocktainer {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.lolnoob {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.funny-cow {
+  top: 490px;
+  right: 1800px;
+  position: absolute;
+  height: 395px;
+  width: 357px;
+  transform: rotate(350deg);
+  visibility: hidden;
+}
+
+.dancing-cow {
+  position: absolute;
+  left: 750px;
+  top: 350px;
+  visibility: hidden;
+}
+
+#click-me {
+  right: 1625px;
+  top: 450px;
+  position: absolute;
+  height: 150px;
+  width: 200px;
+  transform: rotate(20deg);
+  visibility: hidden;
+}
+
+#yo {
+  right: 1625px;
+  top: 450px;
+  position: absolute;
+  height: 150px;
+  width: 200px;
+  transform: rotate(20deg);
+  visibility: hidden;
+}
+
+#bye {
+  height: 150px;
+  width: 200px;
+  position: absolute;
+  left: 1113px;
+  bottom: 450px;
+  transform: rotate(20deg);
+  visibility: hidden;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.unselectable:visited{
+  outline: none;
+  color: #FEF2BF;
+  text-decoration: none;
+}
+
+.unselectable:link{
+  outline: none;
+  color: #FEF2BF;
+  text-decoration: none;
+}
