@@ -18,8 +18,6 @@ function nextSequence() {
 
     $("#title").html("Level " + level);
     level++;
-
-    callCow();
 };
 
 //sound;
@@ -99,13 +97,12 @@ function restart(){
 };
 
 //cow event is being handled by #moo instead of .funnycow because .funnycow is acting up like a cunt idk why
-function callCow() {
-    playSound("secretcow");
-    
-        setTimeout(() => {
-            $("#moo").css({"visibility": "visible"}); 
-        }, 100);
-}
+$("#bottom-text").one("click", () => {
+    setTimeout(() => {
+        $("#moo").css({"visibility": "visible"});
+        playSound("secretcow");
+    }, 100);
+})
 
 $("#moo").hover(() => {$("#click-me").css({"visibility": "visible"});}, () => {$("#click-me").css({"visibility": "hidden"});})
 
