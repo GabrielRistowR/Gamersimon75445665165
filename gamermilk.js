@@ -18,6 +18,8 @@ function nextSequence() {
 
     $("#title").html("Level " + level);
     level++;
+
+    cowPop();
 };
 
 //sound;
@@ -52,13 +54,15 @@ $(".btn").click(function(){
 
 var level = 0;
 
-$("body").keydown(function (){
-    if (level === 0){
-        nextSequence();
-        animatePress();
-        $("#title").html("Level " + level);
-        $("#bottom-title").hide();
-        $("h1").css({"margin-bottom": "42px"});
+$("body").keydown((event) => {
+    if (event.key == "e"){
+        if (level === 0){
+            nextSequence();
+            animatePress();
+            $("#title").html("Level " + level);
+            $("#bottom-title").hide();
+            $("h1").css({"margin-bottom": "42px"});
+        }
     }
 });
 
@@ -77,7 +81,7 @@ function checkAnswer(currentLevel){
 
         $("h1").html("🟩🟥 GGs 🟨🟦");
         $("h1").css({"margin-bottom": "0px"});
-        $("#bottom-title").show().html("press any key to restart.");
+        $("#bottom-title").show().html("press E to restart.");
 
         $("body").addClass("lolnoob");
         setTimeout(function () {
@@ -97,24 +101,41 @@ function restart(){
 };
 
 //cow event is being handled by #moo instead of .funnycow because .funnycow is acting up like a cunt idk why
-$("#bottom-text").one("click", () => {
-    setTimeout(() => {
-        $("#moo").css({"visibility": "visible"});
-        playSound("secretcow");
-    }, 100);
-})
+function cowPop(){
+    if (level === 3){ //will pop at level 8
+        setTimeout(() => {
+            $("#moo").css({"visibility": "visible"});
+            playSound("secretcow");
+        }, 100);
 
-$("#moo").hover(() => {$("#click-me").css({"visibility": "visible"});}, () => {$("#click-me").css({"visibility": "hidden"});})
+        setTimeout(() => {
+            $("#yo").css({"visibility": "visible"});
+        }, 500);
+        
+        setTimeout(() => {
+           $("#yo").css({"visibility": "hidden"}); 
+        }, 3000);
+
+        setTimeout(() => {
+            $("#moo").hover(() => {
+                $("#click-me").css({"visibility": "visible"});
+            }, () => {
+                $("#click-me").css({"visibility": "hidden"});
+            }) 
+        }, 200);
+
+    }
+}
 
 $("#moo").click(() => {
-    $("#yo").css({"visibility": "visible"});
+    $("#click-me").hide();
     
+    $("#moo").css({"visibility": "hidden"});
     setTimeout(() => {
         playSound("barnyard"); 
     }, 150);
 
     setTimeout(() => {
-        $("#yo").css({"visibility": "hidden"});
         $("#moo").fadeOut(100);
     }, 900);
 
