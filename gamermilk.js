@@ -102,7 +102,7 @@ function restart(){
 
 //cow event is being handled by #moo instead of .funnycow because .funnycow is acting up like a cunt idk why
 function cowPop(){
-    if (level === 3){ //will pop at level 8
+    if (level === 5){ //will pop at level 4
         setTimeout(() => {
             $("#moo").css({"visibility": "visible"});
             playSound("secretcow");
