@@ -1,5 +1,5 @@
 //alert("isto ser teste");
-var buttonColours = ["red", "blue", "green", "yellow"];
+var buttonColours = ["red1", "blue", "green", "yellow"];
 
 var gamePattern = [];
 
