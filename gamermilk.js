@@ -114,7 +114,7 @@ function cowPop(){
         
         setTimeout(() => {
            $("#yo").css({"visibility": "hidden"}); 
-        }, 3000);
+        }, 1000);
 
         setTimeout(() => {
             $("#moo").hover(() => {
